@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="programas">
+
+        <item>Volver al futuro</item>
+        <item>El chavo del 8</item>
+        <item>Malcom el de en medio</item>
+
+    </string-array>
+
+</resources>

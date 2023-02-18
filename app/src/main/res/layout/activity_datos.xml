@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DatosActivity"
+    android:stretchColumns="*"
+    >
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+
+    <TextView
+        android:id="@+id/tvDatos"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Datos"
+        android:textAlignment="center"
+        android:background="@color/teal_700"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+
+        <TextView
+            android:id="@+id/tvValor"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="Valor"
+        android:textAlignment="center"
+        android:background="@color/teal_700"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        />
+    </TableRow>
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/tvCanal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Canal"
+            android:textAlignment="center"
+            android:background="@color/teal_700"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvValorCanal"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:background="@color/teal_700"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+    </TableRow>
+
+    <TableRow
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        >
+
+        <TextView
+            android:id="@+id/tvPrograma"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Programa"
+            android:textAlignment="center"
+            android:background="@color/teal_700"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/tvValorPrograma"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textAlignment="center"
+            android:background="@color/teal_700"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+    </TableRow>
+
+    <TableRow>
+        <Button
+            android:text="Boton"
+            android:layout_span="2"
+            >
+
+        </Button>
+    </TableRow>
+
+
+</TableLayout>
