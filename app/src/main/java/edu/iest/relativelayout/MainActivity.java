@@ -1,7 +1,9 @@
 package edu.iest.relativelayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -26,9 +28,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         EditText etCanal =findViewById(R.id.etCanal);
         TextView tvCanal =findViewById(R.id.tvCanal);
 
+        //CAMBIAR COLOR DE TEXTO Y FONDO POR CÓDIGO
+//        tvCanal.setTextColor(ContextCompat.getColor(this, R.color.purple_200));
+//        tvCanal.setBackgroundColor(ContextCompat.getColor(this, R.color.teal_700));
 
         Spinner spProgramas=findViewById(R.id.spProgramas);
-        ImageView ivContinuara=findViewById(R.id.ivContinuara);
+        ivContinuara=findViewById(R.id.ivContinuara);
 
         spProgramas.setOnItemSelectedListener(this);
 
@@ -37,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
                 //AQUI LA LOGICA QUE HACER AL DAR CLICK
-                //OBTENDREMOS EL VALOR DEL EDITTEXT Y LO ASIGRNAREMOS AL TEXT VIEW INFERIOR
+                //OBTENDREMOS EL VALOR DEL EDITTEXT Y LO ASIGNAREMOS AL TEXT VIEW INFERIOR
 
                 String texto = etCanal.getText().toString();
                 Toast.makeText(MainActivity.this, "El valor era " + texto, Toast.LENGTH_SHORT).show();
