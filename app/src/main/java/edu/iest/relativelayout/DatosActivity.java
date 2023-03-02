@@ -13,12 +13,11 @@ public class DatosActivity extends AppCompatActivity {
 
         if (getIntent() != null) {
             Bundle extras = getIntent().getExtras();
-            if (extras!= null) {
+            if (extras != null) {
                 int canal = extras.getInt("canal");
                 String programa = extras.getString("programa");
+                // Hacer lo que necesites con los valores recibidos
             }
         }
-
-
     }
 }
