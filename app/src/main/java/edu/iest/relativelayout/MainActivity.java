@@ -3,7 +3,9 @@ package edu.iest.relativelayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -42,7 +44,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onClick(View view) {
                 //AQUI LA LOGICA QUE HACER AL DAR CLICK
-                //OBTENDREMOS EL VALOR DEL EDITTEXT Y LO ASIGNAREMOS AL TEXT VIEW INFERIOR
+                //OBTENDREMOS EL V
+                // ALOR DEL EDITTEXT Y LO ASIGNAREMOS AL TEXT VIEW INFERIOR
 
                 String texto = etCanal.getText().toString();
                 Toast.makeText(MainActivity.this, "El valor era " + texto, Toast.LENGTH_SHORT).show();
@@ -77,6 +80,38 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 startActivity(intent);
             }
         });
+
+        ivContinuara.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setMessage("¿Desea continuar?")
+                        .setCancelable(false)
+                        .setPositiveButton("Sí", new DialogInterface.OnClickListener(){
+                            public void onClick(DialogInterface dialog, int id) {
+                                String programa = ((Spinner) findViewById(R.id.spProgramas)).getSelectedItem().toString();
+                                String texto = ((EditText) findViewById(R.id.etCanal)).getText().toString();
+
+                                Bundle bundle = new Bundle();
+                                bundle.putString("programa", programa);
+                                bundle.putInt("canal", Integer.parseInt(texto));
+
+                                Intent intent = new Intent(MainActivity.this, DatosActivity.class);
+                                intent.putExtras(bundle);
+
+                                startActivity(intent);
+                            }
+                        })
+                        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int id) {
+                                dialog.cancel();
+                            }
+                        });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
+
 
 
     }
